@@ -3,6 +3,4 @@ Manzanas
 Pan
 Arroz
 
-Palta
-Naranjas
-Melon
+
