@@ -8,21 +8,24 @@ h1{
     color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
-    background-color: dimgrey;
+    background-color: rgb(105, 105, 105);
+    background: linear-gradient(90deg,#696969 50%, #a4a4a4 100%);
     font-weight: bold;
     padding: 12px 16px;
     margin: 0;
+    box-shadow: 1px 1px 7px -2px rgba(0,0,0,0.20);
 }
 
 h2{
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
-    background-color:lightgrey;
+    background-color: rgb(231, 231, 231);
     padding: 12px 16px;
     width: fit-content;
     border-radius: 8px;
     margin: 0;
+    box-shadow: 1px 1px 7px -2px rgba(0,0,0,0.20);
 }
 
 h4{
@@ -34,16 +37,19 @@ h4{
     padding: 12px 16px;
     text-align: center;
     margin: 0;
+    box-shadow: 1px 1px 7px -2px rgba(0,0,0,0.20);
 }
 
 h5{
    background-color: dimgrey;
+   background: linear-gradient(90deg,#696969 50%, #a4a4a4 100%);
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-weight: normal;
    color: rgb(255, 255, 255);
     padding: 32px 16px;
     text-align: center;
-    margin: 0; 
+    margin: 0;
+    box-shadow: 1px 1px 7px -2px rgba(0,0,0,0.20); 
 }
 
 h5 a:link,
@@ -98,7 +104,7 @@ a:active {
 p{
     font-family: system-ui, -apple-system, sans-serif;
   font-size: small;
-  line-height: 1.6;      /* Interlineado cómodo para lectura */
+  line-height: 1.6;      /* Interlineado cómodo para la lectura */
   color: #222222;
   padding: 12px 16px;
   text-align: center;      
@@ -113,15 +119,35 @@ p{
 }
 
 .lista-horizontal {
-    background-color: #949494;
   display: flex;          /* Pone los <li> uno al lado del otro hacia la derecha */
   justify-content: center; /* Centra todos los <li> horizontalmente */
   list-style: none;       /* Quita los puntos de la lista */
-  padding: 16px 24px;             /* Quita el espacio izquierdo por defecto */
+  flex-wrap: wrap;
+  padding: 20px 16px;             /* Quita el espacio izquierdo por defecto */
+  background-color: #949494;
   margin: 0;              /* Quita márgenes externos por defecto */
-  gap: 24px;              /* Espacio horizontal entre cada ítem */
+  gap: 16px;              /* Espacio horizontal entre cada ítem */
   width: 100%;           /* Asegura que ocupe todo el ancho disponible */
   box-sizing: border-box;/* Evita que el padding lateral ensanche la caja más allá del 100% */
+}
+
+.lista-horizontal li {
+  display: flex;
+  align-items: center;      /* Centra verticalmente el nombre y el botón +info */
+  justify-content: space-between;
+  gap: 12px;                /* Espacio entre el nombre de la serie y el botón +info */
+  background-color: #f0f0f0;/* Fondo claro de la pastilla (igual que las tarjetas de pelis) */
+  padding: 8px 10px 8px 16px; /* Un poco más de aire a la izquierda para el texto */
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 7px -2px rgba(0,0,0,0.36);
+}
+
+.lista-horizontal li a:link,
+.lista-horizontal li a:visited {
+  padding: 6px 12px;        /* Hace el botón +info más compacto para que calce dentro de la pastilla */
+  border-radius: 8px;
+  font-size: small;
 }
 
 .contenedor {
@@ -194,10 +220,28 @@ img {
 .lista-videos iframe {
   width: 100%;             /* El video ocupa todo el ancho de su tarjeta */
   height: auto;
-  aspect-ratio: 16 / 9;    /* Mantiene la proporción panorámica exacta de YouTube */
+  aspect-ratio: 16 / 9;    /* Mantiene la proporción panorámica de YouTube */
   border-radius: 6px;
   display: block;
 }
+
+
+.cabecera-fija {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* Evita que lo que scrollea abajo se vea por detrás */
+  z-index: 1000;             /* Mantiene toda la cabecera siempre por encima */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* En este caso que puse cabecera fija y la imagen quizas tiene una medida 
+de alto muy alta, no me conviene que sea fijo no? Porque lo veo como incomodo para ver toda la pagina.
+
+Me deje algunas aclaraciones de que son algunas cosas para ir entendiendo mejor y acordarme, igual voy a ir poniendo
+algunas dudas en el foro. Gracias!*/ 
+
 
 
 
