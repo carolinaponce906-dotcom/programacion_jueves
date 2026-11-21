@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+h1{
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    background-color: dimgrey;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0;
+}
+
+h2{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    background-color:lightgrey;
+    padding: 12px 16px;
+    width: fit-content;
+    border-radius: 8px;
+    margin: 0;
+}
+
+h4{
+    color: rgb(78, 78, 78);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: large;
+    background-color: aquamarine;
+    padding: 12px 16px;
+    text-align: center;
+    margin: 0;
+}
+
+h5{
+   background-color: dimgrey;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: normal;
+   color: rgb(255, 255, 255);
+    padding: 32px 16px;
+    text-align: center;
+    margin: 0; 
+}
+
+h5 a:link,
+h5 a:visited {
+  display: inline-block; /* Respeta el padding sin pisar el renglón de arriba */
+  padding: 4px 10px;
+  margin-top: 4px;
+}
+
+li{
+    color: rgb(36, 36, 36);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    padding: 12px 16px;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+a:link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #2b2b2b;
+  font-weight: bold;
+  background-color: aquamarine;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+a:visited {
+  color: #353535;
+}
+
+a:hover {
+  color: rgb(31, 110, 83);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid #44fa84;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+a:active {
+  color: #434242;
+}
+
+p{
+    font-family: system-ui, -apple-system, sans-serif;
+  font-size: small;
+  line-height: 1.6;      /* Interlineado cómodo para lectura */
+  color: #222222;
+  padding: 12px 16px;
+  text-align: center;      
+  margin-bottom: 1rem;   /* Separación entre párrafos */
+  max-width: 65ch;       /* Limita el ancho de línea para mejorar la lectura */
+}
+
+.fila-titulos {
+  display: flex;
+  gap: 16px; /* Espacio entre ambos h2 */
+  align-items: center; /* Los alinea verticalmente al centro */
+}
+
+.lista-horizontal {
+    background-color: #949494;
+  display: flex;          /* Pone los <li> uno al lado del otro hacia la derecha */
+  justify-content: center; /* Centra todos los <li> horizontalmente */
+  list-style: none;       /* Quita los puntos de la lista */
+  padding: 16px 24px;             /* Quita el espacio izquierdo por defecto */
+  margin: 0;              /* Quita márgenes externos por defecto */
+  gap: 24px;              /* Espacio horizontal entre cada ítem */
+  width: 100%;           /* Asegura que ocupe todo el ancho disponible */
+  box-sizing: border-box;/* Evita que el padding lateral ensanche la caja más allá del 100% */
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-parrafos {
+  display: flex;
+  justify-content: center; /* Centra el bloque de los 3 párrafos en la pantalla */
+  gap: 15px;               /* Espacio de separación entre cada párrafo */
+  flex-wrap: wrap;         /* Permite que bajen en pantallas más chicas */
+  margin-top: 15px;
+}
+
+.contenedor-parrafos p {
+  width: 280px;            /* Mismo ancho para cada columna de texto */
+  text-align: justify;        /* Justificación del texto interno */
+  margin: 0;               /* Quita márgenes por defecto del navegador */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-color: #ffffff;
+}
+
+.texto-sobre-foto {
+  position: relative; /* Sirve de referencia para ubicar lo de adentro */
+  width: 100%; /* Se ajusta exactamente al ancho real de la imagen */
+  max-width: 100%;    /* Nunca supera el ancho de la pantalla al achicar */
+}
+
+.titulos-sobre-foto {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  display: flex;
+  gap: 20px;
+}
+
+.lista-videos {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas en la pantalla */
+  flex-wrap: wrap;         /* Hace que bajen a otra fila si no entran */
+  gap: 24px;               /* Separación entre cada tarjeta */
+  list-style: none;        /* Saca las viñetas/números por defecto */
+  padding: 24px 16px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lista-videos li {
+  display: flex;
+  flex-direction: column;  /* Pone el título arriba y el video abajo */
+  gap: 12px;               /* Espacio entre el título de la peli y el video */
+  width: 340px;            /* Ancho base de cada tarjeta */
+  max-width: 100%;         /* Evita que desborde en pantallas muy angostas */
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.lista-videos video,
+.lista-videos iframe {
+  width: 100%;             /* El video ocupa todo el ancho de su tarjeta */
+  height: auto;
+  aspect-ratio: 16 / 9;    /* Mantiene la proporción panorámica exacta de YouTube */
+  border-radius: 6px;
+  display: block;
+}
+
+
+
